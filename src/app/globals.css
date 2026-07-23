@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-paper-line;
+  }
+  body {
+    background-image: linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent 42px,
+      rgba(32, 36, 42, 0.05) 43px
+    );
+    background-size: 100% 43px;
+    background-attachment: local;
+  }
+  :focus-visible {
+    outline: 2px solid theme('colors.verdigris.DEFAULT');
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+}
+
+@layer components {
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+}
