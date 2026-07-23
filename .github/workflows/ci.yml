@@ -23,7 +23,7 @@ jobs:
         env:
           AWS_REGION: ap-south-1
           DYNAMODB_TABLE_NAME: ledger-todo-ci
-          AWS_ACCESS_KEY_ID: dummy
-          AWS_SECRET_ACCESS_KEY: dummy
-          APP_PASSWORD: ci-only-placeholder
-          SESSION_SECRET: ci-only-placeholder-secret
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          APP_PASSWORD: ${{ secrets.AWS_PASSWORD }}
+          SESSION_SECRET: $ {{ secrets.SESSION_SECRET }}
